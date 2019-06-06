@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galagish", "Galagish\Galagish.csproj", "{2B90E186-60F1-482C-A3D8-FB7FA31554A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaveMap", "CaveMap\CaveMap.csproj", "{17BB21C9-A904-4548-B52F-5DD3DC797517}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minesweeper", "Minesweeper\Minesweeper.csproj", "{92CF7149-80B7-40DF-B828-EB0FF602E20D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B90E186-60F1-482C-A3D8-FB7FA31554A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B90E186-60F1-482C-A3D8-FB7FA31554A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B90E186-60F1-482C-A3D8-FB7FA31554A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B90E186-60F1-482C-A3D8-FB7FA31554A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17BB21C9-A904-4548-B52F-5DD3DC797517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17BB21C9-A904-4548-B52F-5DD3DC797517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17BB21C9-A904-4548-B52F-5DD3DC797517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17BB21C9-A904-4548-B52F-5DD3DC797517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92CF7149-80B7-40DF-B828-EB0FF602E20D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92CF7149-80B7-40DF-B828-EB0FF602E20D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92CF7149-80B7-40DF-B828-EB0FF602E20D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92CF7149-80B7-40DF-B828-EB0FF602E20D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C600A42A-477B-4B97-807A-3025CA58A4F8}
+	EndGlobalSection
+EndGlobal
