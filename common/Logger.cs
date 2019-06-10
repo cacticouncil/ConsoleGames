@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace FSPG
+namespace Cacti
 {
     public static class Logger
     {

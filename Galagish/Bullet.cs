@@ -90,20 +90,26 @@ namespace Galagish
             if (!mAlive)
                 return;
 
+            // remember last used foreground color
+            ConsoleColor prev = Console.ForegroundColor;
+
             Console.SetCursorPosition((int)mXPos, (int)mYPos);
 
             switch (mType)
             {
                 case Type.Player:
-                    Console.Write('.');
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write('o');
                     break;
                 case Type.Enemy:
+                    Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.Write('!');
                     break;
                 default:
                     break;
             }
 
+            Console.ForegroundColor = prev;
         }
     }
 }

@@ -151,6 +151,10 @@ namespace Galagish
             if (!mAlive)
                 return;
 
+            // remember last used foreground color
+            ConsoleColor prev = Console.ForegroundColor;
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.SetCursorPosition((int)mXPos, (int)mYPos);
 
             switch (mType)
@@ -167,6 +171,8 @@ namespace Galagish
                 default:
                     break;
             }
+
+            Console.ForegroundColor = prev;
         }
     }
 }

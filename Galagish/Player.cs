@@ -7,8 +7,8 @@ namespace Galagish
 {
     class Player
     {
-        const float Speed = 1.25f;
         const int FireRate = 80;
+
         static Game GameObject;
 
         bool      mAlive;
@@ -69,11 +69,11 @@ namespace Galagish
                 }
             }
             if (Utility.GetKeyState(ConsoleKey.RightArrow))
-                mXPos += Speed;
+                mXPos++;
             else if (Utility.GetKeyState(ConsoleKey.LeftArrow))
-                mXPos -= Speed;
+                mXPos--;
 
-                // collision with window
+            // wall collision (X-axis only)
             if (mXPos < 0)
                 mXPos = 0;
             else if (mXPos > Console.WindowWidth - 1)
@@ -82,8 +82,14 @@ namespace Galagish
 
         public void Draw()
         {
+            // remember last used foreground color
+            ConsoleColor prev = Console.ForegroundColor;
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.SetCursorPosition((int)mXPos, (int)mYPos);
             Console.Write('^');
+
+            Console.ForegroundColor = prev;
         }
     }
 }

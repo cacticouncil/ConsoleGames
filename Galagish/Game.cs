@@ -8,17 +8,26 @@ namespace Galagish
 {
     class Game
     {
+        static int DefNumEnemies = 20;
+
         bool         mGameOver;
         int          mScore;
         Player       mPlayer;
         List<Enemy>  mEnemies;
-        int          mNumEnemies;
         List<Bullet> mBullets;
 
         public Game()
         {
             // empty
         }
+
+        //public void Menu()
+        //{
+        //    // TODO: make a menu screen
+        //    // ask the user for some options
+        //    // read in their input and use those values when initializing the game
+        //    // remember to clear the screen
+        //}
 
         public void Init()
         {
@@ -30,9 +39,8 @@ namespace Galagish
             mPlayer.SetPosition(Console.WindowWidth / 2, Console.WindowHeight - 1);
 
             // init enemies
-            mNumEnemies = 30;
             mEnemies = new List<Enemy>();
-            for (int i = 0; i < mNumEnemies; i++)
+            for (int i = 0; i < DefNumEnemies; i++)
             {
                 Enemy.Type type = (Enemy.Type)(Utility.Rand() % 3);
                 int x = Utility.Rand() % Console.WindowWidth;
@@ -73,11 +81,11 @@ namespace Galagish
                 // update
                 Update();
 
-                // draw
+                // draw/render
                 Draw();
 
-                // timestep
-                Thread.Sleep(30);
+                // timestep (1000/20 = 50 FPS) 
+                Thread.Sleep(20);
             }
 
             // drain any key presses left in the input buffer
@@ -90,9 +98,17 @@ namespace Galagish
             bool won = (mPlayer.IsAlive() && (mEnemies.Count <= 0));
 
             if (won)
+            {
+                Console.BackgroundColor = ConsoleColor.DarkGreen;
+                Console.Clear();
                 Utility.WriteCentered("You win!!");
+            }
             else
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.Clear();
                 Utility.WriteCentered("You lose :(");
+            }
         }
 
         private void Update()
@@ -153,9 +169,7 @@ namespace Galagish
             mPlayer.Update();
 
             // win conditions
-            if (!mPlayer.IsAlive())
-                mGameOver = true;
-            else if (mEnemies.Count <= 0)
+            if (!mPlayer.IsAlive() || mEnemies.Count <= 0)
                 mGameOver = true;
         }
 
