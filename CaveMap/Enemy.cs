@@ -114,7 +114,7 @@ namespace CaveMapAdventure
 
             Map map = mTheGame.GetMap();
             Console.SetCursorPosition(mX + map.GetX(), mY + map.GetY());
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.Write('#');
 
             Console.ForegroundColor = tmp;

@@ -10,6 +10,7 @@ namespace Bounce
         static void Main(string[] args)
         {
             // setup console
+            Utility.SetupWindow("Bounce", 80, 32);
             Utility.EOLWrap(false);
             Console.CursorVisible = false;
             Console.ForegroundColor = ConsoleColor.White;

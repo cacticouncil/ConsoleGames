@@ -190,8 +190,11 @@ namespace Galagish
             mPlayer.Draw();
 
             // HUD
+            ConsoleColor prev = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.SetCursorPosition(1, 0);
             Console.Write("Score:          \b\b\b\b\b\b\b\b\b" + mScore);
+            Console.ForegroundColor = prev;
 
             Utility.LockConsole(false);
         }
