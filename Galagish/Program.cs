@@ -7,8 +7,6 @@ namespace Galagish
 {
     class Program
     {
-        static Game mGame;
-
         static void Main(string[] args)
         {
             Utility.SetupWindow("Galagish", 80, 32);
@@ -18,7 +16,7 @@ namespace Galagish
             Console.BackgroundColor = ConsoleColor.Black;
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            mGame = new Game();
+            Game mGame = new Game();
             //mGame.Menu();
             mGame.Init();
             mGame.Run();

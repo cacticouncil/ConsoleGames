@@ -50,6 +50,11 @@ namespace Minesweeper
 
         static void Main(string[] args)
         {
+            Utility.EOLWrap(false);
+            Console.CursorVisible = false;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.Black;
+
             bool replay = true;
 
             while (replay)

@@ -1,4 +1,5 @@
 ﻿using System;
+using Cacti;
 
 
 namespace CaveMapAdventure
@@ -7,8 +8,13 @@ namespace CaveMapAdventure
     {
         static void Main(string[] args)
         {
-            Game game = new Game();
+            Utility.EOLWrap(false);
+            Console.CursorVisible = false;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.Black;
 
+            Game game = new Game();
+            //game.Menu();
             game.Init();
             game.Run();
             game.Shutdown();
